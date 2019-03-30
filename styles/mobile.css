@@ -1,0 +1,108 @@
+/* Ajustes Tablets */
+@media screen and ( max-width: 768px ) {
+  body {
+    font-size: 16px;
+    line-height: 1.625em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 { line-height: 1.2em; }
+  h1 { font-size: 2.2em; }
+  h2 { font-size: 1.65em; }
+  h3 { font-size: 1.48em; }
+  h4 { font-size: 1.32em; }
+  h5 { font-size: 1.2em; }
+  h6 { font-size: 1.1em; }
+  figcaption {
+    margin-left: auto;
+    margin-right: auto;
+    width: 86%;
+  }
+  input,
+  textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+
+  .logo-link { padding: 20px 5% 0; }
+}
+
+/* Ajustes Smartphones */
+@media screen and ( max-width: 600px ) {
+  .logo-img--footer { float: none; }
+
+  /* Article Post */
+  .article-header {
+    height: 65vh;
+    max-height: inherit;
+  }
+  .over-image-bg {
+    padding: 0 7% 30px;
+  }
+  .article-content h2,
+  .article-content h3,
+  .article-content h4,
+  .article-content h5,
+  .article-content h6,
+  .article-content p,
+  .article-content ul,
+  .article-content ol {
+    margin-top: 1.6em;
+    width: 86%;
+  }
+  .article-content hr {
+    width: 40%;
+  }
+  .article-relative-box--90w,
+  .article-relative-box--80w,
+  .article-relative-box--65w { width: 100%; }
+  .article-image-grid--45v,
+  .article-image-grid--50v,
+  .article-image-grid--50h,
+  .article-image-grid--66h { width: calc(100% - 2px); }
+  .article-image-grid--33h { width: calc(50% - 2px); }
+  .article-image-grid--25v { width: calc(47.2% - 2px); }
+  .article-image-grid--25h { width: calc(52.8% - 2px); }
+  /* Share Content */
+  .share-content { max-width: 86%; }
+  p.share-title { display: none; }
+  /* Related Content */
+  .article-related-content { width: 95%; }
+  .related-content-figure { margin: 0 20px 0 0; }
+  .related-content-figure img {
+    height: auto;
+    width: 150px;
+  }
+  .article-content p.related-content-subtitle {
+    margin-top: 0;
+    width: 100%;
+  }
+  .article-content h4.related-content-title {
+    font-size: 1.2em;
+    margin: 0;
+    width: 100%;
+  }
+  /* Comments */
+  .article-comments,
+  .newsletter-suscription {
+    width: 86%;
+    padding: calc(40px - 1em) 7% 55px;
+  }
+  .newsletter-input {
+    margin-bottom: 1em;
+    margin-right: 0;
+    width: 100%;
+  }
+  .newsletter-submit,
+  .footer-left,
+  .footer-right { width: 100%; }
+  .footer p { display: block; }
+  .footer-right { text-align: left; }
+  .social-media {
+    float: left;
+    margin: 10px 20px 0 0;
+  }
+}
