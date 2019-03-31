@@ -6,7 +6,7 @@
 	$firstCategoryLink 	= get_category_link($category[0]->term_id);
 ?>
 
-  <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <ol id="breadcrumbs" class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 	  <li itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem" class="breadcrumbs-item">
 	    <a itemprop="item" href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo-link">
@@ -20,18 +20,18 @@
 	<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 		<article>
 			<header class="article-header" style="background: url('<?php echo get_the_post_thumbnail_url(); ?>') 50% 50% no-repeat; background-size: cover;">
-				<div class="over-image-bg">
-					<time datetime="<?php the_time( 'Y-m-d' ); ?>" class="article-date"><?php the_time( 'j \d\e F, Y' ); ?>.</time>
-					<?php	the_title( '<h1 class="article-h1">', '</h1>' ); ?>
-				</div>
 			</header>
-			<div class="article-content">
+			<div class="article-title">
+				<time datetime="<?php the_time( 'Y-m-d' ); ?>" class="article-date"><?php the_time( 'j \d\e F, Y' ); ?>.</time>
+				<?php	the_title( '<h1 class="article-h1">', '</h1>' ); ?>
+			</div>
+			<section class="article-content">
 				<?php echo $content = apply_filters( 'the_content', get_the_content() ); $content = str_replace( ']]>', ']]&gt;', $content ); ?>
 				<?php
 			    $date_visit = get_post_meta($post->ID, "date-of-visit", true);
 			    echo '<p class="visit-date">Fecha de nuestra visita: <strong>' . esc_attr( $date_visit ) . '</strong></p>';
 				?>
-			</div>
+			</section>
 		</article>
 
 		<div id="mc_embed_signup" class="newsletter-suscription clearfix">
@@ -57,6 +57,6 @@
  		<?php if ( comments_open() || get_comments_number() ) : comments_template(); endif; ?>
 	<?php endwhile; else : endif; ?>
 
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5447e6191a5c1555"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() . '/js/single.js'; ?>"></script>
 
 <?php get_footer(); ?>

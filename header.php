@@ -5,7 +5,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/style.min.css'; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/style.css'; ?>">
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri() . '/favicon.png'; ?>">
 
     <meta property="fb:admins" content="561794537" />
