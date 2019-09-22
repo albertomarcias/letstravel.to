@@ -22,7 +22,6 @@
     </article>
   <?php endwhile; endif; ?>
 
-  <?php include( TEMPLATEPATH . '/instagram-widget.php' ); ?>
   <?php include( TEMPLATEPATH . '/world-map.php' ); ?>
 
 <?php get_footer(); ?>

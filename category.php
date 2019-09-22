@@ -49,7 +49,7 @@
 
   <?php include( TEMPLATEPATH . '/world-map.php' ); ?>
 
-  <div>
+  <div class="category-activities">
     <h3>Qué hacer y qué visitar en <?php single_cat_title(); ?></h3>
     <?php
     if ( is_category() ) {

@@ -23,7 +23,7 @@ add_action( 'customize_register', 'ltt_logo' );
 /** Menú Personalizado desde el Admin **/
 function ltt_setup() {
   register_nav_menus( array(
-    'menu-main'  		=>  __( 'Menu Principal', 'ltt' ),
+    'menu'  		=>  __( 'Menu', 'ltt' ),
   ) );
 }
 /** Fin menú Personalizado desde el Admin **/

@@ -8,7 +8,7 @@ a {
   color: #EF4C53;
   text-decoration: none;
   &:hover {
-    color: #f52730!important;
+    color: #1178b3!important;
   }
 }
 h1,
@@ -107,9 +107,30 @@ p:empty {
   margin: 100px auto;
   width: 90%;
 }
-.wp-block-columns {
-  margin: 20px auto 80px;
+.wp-block-columns,
+.category-activities {
+  margin: 20px auto;
   width: 90%;
+
+  ul {
+    margin-block-start: 1.9em;
+    margin-block-end: 1.9em;
+    padding: 0 0 0 1em;
+  }
+  li::before {
+    color: #999;
+    content: "\2022";
+    display: inline-block;
+    margin-left: -1em;
+    width: 1em;
+  }
+  li {
+    list-style: none;
+    margin-block-end: .8em;
+  }
+  .wp-tag-cloud {
+    column-count: 3;
+  }
 }
 
 /* Breadcrumbs */

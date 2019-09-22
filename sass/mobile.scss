@@ -9,7 +9,10 @@
   h3,
   h4,
   h5,
-  h6 { line-height: 1.3em; }
+  h6 {
+    letter-spacing: -.6px;
+    line-height: 1.2em;
+  }
   h1 { font-size: 1.8em; }
   h2 { font-size: 1.6em; }
   h3 { font-size: 1.48em; }
@@ -46,6 +49,12 @@
   /* Article Post */
   .article-header {
     max-height: inherit;
+  }
+  .home-featured-post,
+  .category-posts {
+      .article-header {
+        height: 50vh;
+      }
   }
   .over-image-bg {
     padding: 0 7% 30px;

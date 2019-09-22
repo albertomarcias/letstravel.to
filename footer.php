@@ -6,7 +6,7 @@
 
     <footer class="footer clearfix">
       <div class="footer-left">
-        <img class="logo-img logo-img--footer" src="<?php echo esc_url( get_theme_mod( 'ltt_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img class="logo-img logo-img--footer" src="<?php echo esc_url( get_theme_mod( 'ltt_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
         <p>© 2019. En la ruta durante <?php echo round($days_travelling / (60 * 60 * 24)); ?> días.</p>
       </div>
       <div class="footer-right">
