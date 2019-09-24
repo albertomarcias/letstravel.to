@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+  get_header();
+  // Get the current tag object
+  $tag = get_queried_object();
+  // Get the ID of the current tag
+  $tag_id = $tag->term_id;
+  // Get the URL of this tag
+  $tag_link = get_tag_link( $tag_id );
+?>
 
   <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
     <li itemprop="itemListElement" itemscope
@@ -8,7 +16,7 @@
       </a><meta itemprop="position" content="1" />
     </li>
     <li itemprop="itemListElement" itemscope
-      itemtype="http://schema.org/ListItem" class="breadcrumbs-item breadcrumbs-item--text"> / <a itemprop="item" href="<?php get_tag_link(); ?>" alt="<?php single_tag_title(); ?>" title="<?php single_tag_title(); ?>"><h1 itemprop="name"><?php single_tag_title(); ?></h1></a><meta itemprop="position" content="2" /></li>
+      itemtype="http://schema.org/ListItem" class="breadcrumbs-item breadcrumbs-item--text"> / <a itemprop="item" href="<?php echo esc_url( $tag_link ); ?>" alt="<?php single_tag_title(); ?>" title="<?php single_tag_title(); ?>"><h1 itemprop="name"><?php single_tag_title(); ?></h1></a><meta itemprop="position" content="2" /></li>
   </ol>
 
   <?php

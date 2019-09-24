@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+  get_header();
+  // Get the current category object
+  $category = get_queried_object();
+  // Get the ID of the current category
+  $category_id = $category->term_id;
+  // Get the URL of this category
+  $category_link = get_category_link( $category_id );
+?>
 
   <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
     <li itemprop="itemListElement" itemscope
@@ -8,7 +16,7 @@
       </a><meta itemprop="position" content="1" />
     </li>
     <li itemprop="itemListElement" itemscope
-      itemtype="http://schema.org/ListItem" class="breadcrumbs-item breadcrumbs-item--text"> / <a itemprop="item" href="<?php get_category_link(); ?>" alt="<?php single_cat_title(); ?>" title="<?php single_cat_title(); ?>"><h1 itemprop="name"><?php single_cat_title(); ?></h1></a><meta itemprop="position" content="2" /></li>
+      itemtype="http://schema.org/ListItem" class="breadcrumbs-item breadcrumbs-item--text"> / <a itemprop="item" href="<?php echo esc_url( $category_link ); ?>" alt="<?php single_cat_title(); ?>" title="<?php single_cat_title(); ?>"><h1 itemprop="name"><?php single_cat_title(); ?></h1></a><meta itemprop="position" content="2" /></li>
   </ol>
 
   <?php
