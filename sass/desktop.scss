@@ -273,6 +273,7 @@ p:empty {
 }
 .article-h1 {
   margin: 0;
+  width: 700px;
 }
 .article-content {
   margin: 0 0 100px;
@@ -368,6 +369,12 @@ p:empty {
 }
 .article-image-grid--25v {
   width: calc(22.9% - 2px);
+}
+.article-image-grid--25vw {
+  width: calc(25% - 2px);
+}
+.article-image-grid--33v {
+  width: calc(33.33% - 2px);
 }
 .article-image-grid--25h {
   width: calc(25.65% - 2px);
