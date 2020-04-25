@@ -36,6 +36,7 @@ function create_post_type() {
           'name'            => __( 'Animales' )
           , 'singular_name' => __( 'Animal' )
         )
+      , 'taxonomies'        => array( 'category' )
       , 'public'            => true
       , 'has_archive'       => true
       , 'menu_position'     => 2
