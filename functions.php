@@ -28,6 +28,25 @@ function ltt_setup() {
 }
 /** Fin menú Personalizado desde el Admin **/
 
+/* Crear posts especiales */
+function create_post_type() {
+  register_post_type( 'animals',
+    array(
+      'labels'              => array(
+          'name'            => __( 'Animales' )
+          , 'singular_name' => __( 'Animal' )
+        )
+      , 'public'            => true
+      , 'has_archive'       => true
+      , 'menu_position'     => 2
+      , 'show_in_rest'      => true
+      , 'supports'          => array( 'title', 'editor', 'author', 'excerpt', 'thumbnail', 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats' )
+    )
+  );
+}
+add_action( 'init', 'create_post_type' );
+/* Fin creación post */
+
 /** Setear tamaño imágenes **/
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'search', 200, 200, true );
