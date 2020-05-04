@@ -4,7 +4,7 @@
 
   <?php while( have_posts() ) : the_post(); ?>
     <article>
-      <?php the_title( '<h1>', '</h1>' ); ?>
+      <?php the_title( '<h1 class="newsletter-title">', '</h1>' ); ?>
       <?php echo $content = apply_filters( 'the_content', get_the_content() ); $content = str_replace( ']]>', ']]&gt;', $content ); ?>
     </article>
   <?php endwhile; ?>

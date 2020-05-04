@@ -36,6 +36,7 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-      <img class="" src="<?php echo get_template_directory_uri() . '/images/letstravel-to-logo.svg'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" width="500" height="">
-    </a>
+    <div class="newsletter-container">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+        <img class="main-logo" src="<?php echo get_template_directory_uri() . '/images/letstravel-to-logo.svg'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" width="500" height="">
+      </a>
